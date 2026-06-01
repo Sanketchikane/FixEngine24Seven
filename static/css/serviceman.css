@@ -1,0 +1,15 @@
+/* SERVICEMAN CUSTOM STYLING */
+
+.job-card {
+    background: #fafafa;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border-left: 4px solid #0077ff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.status-text {
+    font-weight: 600;
+    font-size: 18px;
+}

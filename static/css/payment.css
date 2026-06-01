@@ -1,0 +1,25 @@
+/* PAYMENT PAGE – ENTERPRISE */
+
+.payment-box {
+    width: 360px;
+    background: #fff;
+    padding: 30px;
+    margin: 60px auto;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.pay-details {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.btn-main {
+    width: 100%;
+    padding: 12px;
+    background: #0077ff;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}

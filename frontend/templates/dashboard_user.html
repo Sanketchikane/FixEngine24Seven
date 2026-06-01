@@ -1,0 +1,13 @@
+<h2>Welcome back, {{ current_user.name }}!</h2>
+<p>You have {{ bookings | length }} upcoming bookings.</p>
+
+<h3>Your Upcoming Bookings:</h3>
+<ul>
+  {% for b in bookings %}
+  <li>
+    {{ b.service.title }} — {{ b.scheduled_time }} —
+    Status: {{ b.status }}
+    <button class="btn" onclick="window.location='/user/track/{{ b.id }}'">Track</button>
+  </li>
+  {% endfor %}
+</ul>

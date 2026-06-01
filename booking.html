@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Service - Fixengine24×7</title>
+
+    <link rel="stylesheet" href="static/css/booking.css">
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="static/js/db.js"></script>
+    <script src="static/js/session.js"></script>
+    <script src="static/js/booking.js"></script>
+</head>
+
+<body onload="loadBookingForm()">
+
+<div class="booking-form-box">
+
+    <div class="back-btn" onclick="history.back()">← Back</div>
+
+    <h2 id="serviceTitle"></h2>
+    <h3 id="providerTitle"></h3>
+
+    <form onsubmit="submitBooking(event)">
+
+        <div class="input-row">
+            <div class="input-block">
+                <label>Full Name</label>
+                <input type="text" id="bk_name" required>
+            </div>
+
+            <div class="input-block">
+                <label>Phone</label>
+                <input type="text" id="bk_phone" required>
+            </div>
+        </div>
+
+        <div class="input-block">
+            <label>Address</label>
+            <textarea id="bk_address" required></textarea>
+        </div>
+
+        <div class="input-row">
+            <div class="input-block">
+                <label>Pincode</label>
+                <input type="text" id="bk_pincode" required>
+            </div>
+
+            <div class="input-block">
+                <label>Service Date</label>
+                <input type="date" id="bk_date" required>
+            </div>
+
+            <div class="input-block">
+                <label>Service Time</label>
+                <input type="time" id="bk_time" required>
+            </div>
+        </div>
+
+        <div class="input-block">
+            <label>Description</label>
+            <textarea id="bk_desc" placeholder="Explain your requirement…" required></textarea>
+        </div>
+
+        <button class="btn-primary" style="margin-top:20px;">Confirm Booking</button>
+
+        <!-- Razorpay Button -->
+        <button type="button" class="btn-primary pay" onclick="startPayment()">
+            Pay Now (Razorpay / UPI)
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

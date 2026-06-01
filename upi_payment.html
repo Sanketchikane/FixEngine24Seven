@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>UPI Payment</title>
+
+    <link rel="stylesheet" href="static/css/booking.css">
+    <script src="static/js/upi.js"></script>
+</head>
+
+<body onload="loadUPI()">
+
+<div class="booking-form-box">
+
+    <h2>UPI Payment</h2>
+
+    <p><b>Payable Amount:</b> ₹<span id="upi_amount"></span></p>
+
+    <img src="static/images/upi_qr.png" style="width:260px;border-radius:12px;">
+
+    <br><br>
+
+    <button class="btn-primary" onclick="copyUPIID()">Copy UPI ID</button>
+    <p id="upi_msg" style="color:green;"></p>
+
+    <br><br>
+
+    <button class="btn-main" onclick="confirmUPIPayment()">I Have Paid</button>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Rate Service</title>
+    <link rel="stylesheet" href="static/css/booking.css">
+    <script src="static/js/db.js"></script>
+    <script src="static/js/rating.js"></script>
+</head>
+
+<body onload="loadRatingForm()">
+
+<div class="booking-form-box">
+    <h2>Rate Your Service</h2>
+
+    <label>Rating (1 to 5)</label>
+    <input type="number" id="rt_rating" min="1" max="5" required>
+
+    <label>Review</label>
+    <textarea id="rt_review" required></textarea>
+
+    <button onclick="submitRating()" class="btn-primary">Submit</button>
+</div>
+
+</body>
+</html>

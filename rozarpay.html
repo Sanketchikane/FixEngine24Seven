@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Options</title>
+
+    <link rel="stylesheet" href="static/css/booking.css">
+    <script src="static/js/razorpay.js"></script>
+</head>
+
+<body onload="loadRazor()">
+
+<div class="booking-form-box">
+
+    <h2>Select Payment Method</h2>
+
+    <p><b>Amount:</b> ₹<span id="rzp_amount"></span></p>
+
+    <button class="btn-main" onclick="payUPI()">UPI</button>
+    <button class="btn-main" onclick="payCard()">Card</button>
+    <button class="btn-main" onclick="payWallet()">Wallet</button>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="card">
+    <h3>Available Services</h3>
+    <ul>
+      {% for service in services %}
+      <li>
+        <strong>{{ service.title }}</strong> — {{ service.category }} — ₹{{ service.price }}
+        <form method="post" action="/user/book">
+          <input type="hidden" name="service_id" value="{{ service.id }}">
+          <button type="submit" class="btn">Book Now</button>
+        </form>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

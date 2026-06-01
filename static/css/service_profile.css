@@ -1,0 +1,93 @@
+.profile-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+}
+
+.prof-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.profile-row {
+    display: flex;
+    gap: 30px;
+}
+
+.profile-left {
+    width: 35%;
+    text-align: center;
+}
+
+.prof-img-box {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.prof-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #ddd;
+}
+
+.prof-img-box input {
+    position: absolute;
+    bottom: -10px;
+    left: 25%;
+    width: 50%;
+    opacity: 0;
+    cursor: pointer;
+    height: 40px;
+}
+
+.prof-info h3 {
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.profile-right {
+    width: 65%;
+}
+
+.profile-right form label {
+    font-size: 15px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.profile-right input,
+.profile-right select,
+.profile-right textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+
+.profile-right textarea {
+    height: 90px;
+}
+
+.btn-main {
+    padding: 12px 20px;
+    background: #0077ff;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn-main:hover {
+    background: #005ed1;
+}

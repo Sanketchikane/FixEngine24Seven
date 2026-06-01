@@ -1,0 +1,301 @@
+/* ----------------------------------------------------
+   FixEngine247 – MAIN SITE THEME (Enterprise Version)
+---------------------------------------------------- */
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f2f3f5;
+    overflow-x: hidden;
+}
+
+/* ----------------------------------------------------
+   HEADER – NAVY BLUE PROFESSIONAL UI
+---------------------------------------------------- */
+
+.header-main {
+    width: 100%;
+    background: #003366;          /* ★ NAVY BLUE BAR */
+    padding: 12px 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.12);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-logo {
+    height: 52px;
+}
+
+.brand-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;    /* ★ WHITE TEXT */
+}
+
+/* NAV MENU */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header-right a {
+    font-size: 16px;
+    color: #ffffff;    /* ★ WHITE OPTION TEXT */
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.header-right a:hover {
+    color: #89c4ff;    /* ★ LIGHT BLUE HOVER */
+}
+
+/* Login Button */
+.btn-login {
+    padding: 8px 20px;
+    background: #0077ff;
+    color: white !important;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.btn-login:hover {
+    background: #005ad1;
+}
+
+/* ----------------------------------------------------
+   HERO SECTION
+---------------------------------------------------- */
+
+.hero-section {
+    width: 100%;
+    height: 480px;
+    background: url("../images/index.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    width: 50%;
+    color: white;
+}
+
+.btn-main,
+.btn-secondary {
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 17px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.btn-main {
+    background: #0077ff;
+    color: white;
+}
+
+.btn-main:hover {
+    background: #005ad1;
+}
+
+.btn-secondary {
+    border: 1px solid #fff;
+    color: white;
+}
+
+/* ----------------------------------------------------
+   SERVICES
+---------------------------------------------------- */
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    margin: 45px 0 20px 0;
+}
+
+.services-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    padding: 10px 60px 40px 60px;
+}
+
+.service-item {
+    width: 240px;
+    background: white;
+    padding: 18px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.service-item:hover {
+    transform: translateY(-6px);
+}
+
+.service-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
+    background: #f5f5f5;
+}
+
+/* ----------------------------------------------------
+   CONTACT SECTION
+---------------------------------------------------- */
+
+.contact-row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    padding: 40px 10px;
+}
+
+.contact-form,
+.contact-image-box {
+    width: 420px;
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+    margin-bottom: 18px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 14px;
+    background: #0077ff;
+    color: white;
+    border-radius: 10px;
+    font-size: 17px;
+    border: none;
+}
+
+.contact-image-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+/* ----------------------------------------------------
+   ABOUT
+---------------------------------------------------- */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    padding: 20px 60px;
+}
+
+.about-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+/* ----------------------------------------------------
+   FOOTER
+---------------------------------------------------- */
+
+footer {
+    background: #101820;
+    color: white;
+    padding: 50px 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-col {
+    width: 30%;
+}
+
+.footer-logo {
+    height: 60px;
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #ccc;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-credit {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* ----------------------------------------------------
+   MOBILE RESPONSIVE
+---------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .hero-content {
+        width: 100%;
+    }
+
+    .services-box {
+        padding: 20px;
+    }
+
+    .contact-row {
+        flex-direction: column;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}

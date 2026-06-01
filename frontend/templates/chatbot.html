@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FixEngine24Seven - AI Assistant</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #1a73e8;
+    }
+
+    .chatbot-icon {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background-color: #1a73e8;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+
+    .chatbot-icon i {
+      color: white;
+      font-size: 30px;
+    }
+
+    .chat-window {
+      display: none;
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      width: 350px;
+      max-height: 500px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      overflow: hidden;
+      z-index: 1000;
+      flex-direction: column;
+    }
+
+    .chat-header {
+      background: #1a73e8;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .chat-body {
+      padding: 15px;
+      height: 300px;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+
+    .chat-input {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid #ccc;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .chat-input button {
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      margin-left: 8px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .chat-msg {
+      margin-bottom: 10px;
+    }
+
+    .ai-msg {
+      color: #1a73e8;
+    }
+
+    .user-msg {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Welcome to FixEngine24Seven</h1>
+<p>FixEngine24Seven is India’s most trusted platform for over 200+ home services including electricians, plumbers, mechanics, appliance repair professionals, and more. Whether you’re facing an urgent issue or planning scheduled maintenance, our verified experts are available 24x7.</p>
+
+<h2>📌 Purpose</h2>
+<p>Our goal is to simplify access to skilled professionals and eliminate the stress of finding reliable help. Through our smart AI-enabled system, we assign the best available serviceman in your locality—saving time, cost, and effort. We are committed to professional service, real-time assistance, and customer delight.</p>
+
+<h2>🚀 Features</h2>
+<ul>
+  <li>⚡ Book 200+ services in seconds</li>
+  <li>💬 AI-powered assistant to guide and help you anytime</li>
+  <li>📍 Location-based expert assignment</li>
+  <li>🧾 Transparent pricing, verified professionals</li>
+  <li>🔧 Real-time job status and feedback system</li>
+</ul>
+
+<h2>🛠️ Supported Services</h2>
+<p>
+FixEngine24Seven covers a vast range of services like:
+<br><br>
+<b>1. Plumbing Services:</b> Tap leakage, pipeline installations, bathroom fittings.
+<br><b>2. Electrical Services:</b> Fan installation, wiring, power backup solutions.
+<br><b>3. Mechanical Assistance:</b> Bike and car repairs, garage assistance.
+<br><b>4. Appliance Repair:</b> AC, fridge, microwave, and washing machine support.
+<br><b>5. Home Cleaning:</b> Full house, kitchen, sofa and bathroom cleaning.
+<br><b>6. Carpentry:</b> Modular furniture, bed repair, doors and windows.
+<br><b>7. IT & Networking:</b> CCTV, Wi-Fi, router setup, smart devices.
+<br><b>8. Painting & Renovation:</b> Walls, exteriors, waterproofing, wood polishing.
+<br><b>9. Events & Decor:</b> Tent services, wedding setups, floral decor.
+<br><b>10. Pest Control:</b> Termites, cockroaches, rats, mosquitoes.
+<br><br>
+...and 190+ more, across major cities in India.
+</p>
+
+<h2>🎯 Conclusion</h2>
+<p>FixEngine24Seven stands as a next-gen platform empowering citizens to request, manage, and complete household and commercial tasks with AI ease. Trusted by thousands, created by <b>Sanket</b>, this service ensures professional-grade execution, every time.</p>
+
+<!-- CHATBOT UI -->
+<div class="chatbot-icon" onclick="toggleChat()">
+  <i class="fas fa-robot"></i>
+</div>
+
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">🤖 Sanket's AI Assistant</div>
+  <div class="chat-body" id="chatBody">
+    <div class="chat-msg ai-msg">Hello! I’m Sanket’s AI Assistant. Ask me anything about this project.</div>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Type your question...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+  const chatWindow = document.getElementById("chatWindow");
+  const chatBody = document.getElementById("chatBody");
+
+  function toggleChat() {
+    chatWindow.style.display = chatWindow.style.display === "flex" ? "none" : "flex";
+  }
+
+  function sendMessage() {
+    const input = document.getElementById("userInput");
+    const userText = input.value.trim();
+    if (!userText) return;
+
+    chatBody.innerHTML += `<div class="chat-msg user-msg">You: ${userText}</div>`;
+
+    let reply = "I'm not sure how to respond to that yet.";
+
+    if (/who.*(created|developer|founder)/i.test(userText)) {
+      reply = "This project was created by Sanket.";
+    } else if (/what.*name/i.test(userText)) {
+      reply = "The project is called FixEngine24Seven.";
+    } else if (/how.*work/i.test(userText)) {
+      reply = "FixEngine24Seven works by connecting you with 200+ verified home and repair service professionals near your location using smart AI assignment.";
+    } else if (/services|what.*offer/i.test(userText)) {
+      reply = "We offer over 200+ services, including plumbing, electrician, mechanic, appliance repair, and more.";
+    } else if (/purpose|why.*exist/i.test(userText)) {
+      reply = "The main purpose is to provide trusted, time-saving, and expert-based service for all your daily home and technical needs.";
+    } else if (/hello|hi|how.*are/i.test(userText)) {
+      reply = "Hello! I’m your AI assistant. Ask me anything about FixEngine24Seven.";
+    }
+
+    chatBody.innerHTML += `<div class="chat-msg ai-msg">🤖 AI says: ${reply}</div>`;
+    chatBody.scrollTop = chatBody.scrollHeight;
+    input.value = "";
+  }
+</script>
+</body>
+</html>

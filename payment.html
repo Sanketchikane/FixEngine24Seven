@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Complete Payment</title>
+
+    <link rel="stylesheet" href="static/css/booking.css">
+    <script src="static/js/db.js"></script>
+    <script src="static/js/payment.js"></script>
+</head>
+
+<body onload="loadPaymentForm()">
+
+<div class="booking-form-box">
+    <h2>Service Payment</h2>
+
+    <p><b>Booking ID:</b> <span id="pm_bookingId"></span></p>
+    <p><b>Service:</b> <span id="pm_service"></span></p>
+    <p><b>Provider:</b> <span id="pm_provider"></span></p>
+
+    <label>Amount (₹)</label>
+    <input type="number" id="pm_amount" required>
+
+    <label>Payment Mode</label>
+    <select id="pm_mode" required>
+        <option value="Cash">Cash</option>
+        <option value="UPI">UPI</option>
+        <option value="Card">Card</option>
+    </select>
+
+    <button class="btn-primary" onclick="submitPayment()">Confirm Payment</button>
+    <br><br>
+    <button onclick="downloadInvoice()" class="btn-main">Download Invoice</button>
+</div>
+
+</body>
+</html>

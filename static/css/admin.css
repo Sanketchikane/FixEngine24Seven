@@ -1,0 +1,22 @@
+/* ADMIN CUSTOM STYLING - ENTERPRISE */
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.summary-card {
+    background: #fff;
+    padding: 22px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+}
+
+.summary-number {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #0077ff;
+}

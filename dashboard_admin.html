@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="static/css/dashboard.css">
+
+    <script src="static/js/session.js"></script>
+    <script src="static/js/db.js"></script>
+    <script src="static/js/admin.js"></script>
+</head>
+
+<body onload="loadAdminDashboard()">
+
+<div class="dashboard-header">
+    <img src="static/images/logo1.png" class="dashboard-logo">
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<div class="dashboard-tabs">
+    <a id="tab_home" class="active" onclick="showAdminSection('home')">Dashboard</a>
+    <a onclick="showAdminSection('users')">Users</a>
+    <a onclick="showAdminSection('servicemen')">Servicemen</a>
+    <a onclick="showAdminSection('bookings')">Bookings</a>
+    <a onclick="showAdminSection('payments')">Payments</a>
+    <a onclick="showAdminSection('notifications')">Notifications</a>
+    <a onclick="showAdminSection('settings')">Settings</a>
+</div>
+
+<div class="dashboard-content">
+
+    <div id="admin_home" class="card">
+        <h3>Admin Summary</h3>
+        <p>Total Users: <span id="totalUsers"></span></p>
+        <p>Total Servicemen: <span id="totalServicemen"></span></p>
+        <p>Total Bookings: <span id="totalBookings"></span></p>
+    </div>
+
+    <div id="admin_users" class="table-box" style="display:none;">
+        <h3>Registered Users</h3>
+        <div id="adminUserList"></div>
+    </div>
+
+    <div id="admin_servicemen" class="table-box" style="display:none;">
+        <h3>Servicemen</h3>
+        <div id="adminServicemanList"></div>
+    </div>
+
+    <div id="admin_bookings" class="table-box" style="display:none;">
+        <h3>All Bookings</h3>
+        <div id="adminBookingList"></div>
+    </div>
+
+    <div id="admin_payments" class="table-box" style="display:none;">
+        <h3>Payments</h3>
+        <div id="paymentList"></div>
+    </div>
+
+    <div id="admin_notifications" class="card" style="display:none;">
+        <h3>Notifications</h3>
+        <div id="notifList"></div>
+    </div>
+
+    <div id="admin_settings" class="card" style="display:none;">
+        <h3>Settings</h3>
+        <p>Configuration options will appear here.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

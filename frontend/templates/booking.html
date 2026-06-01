@@ -1,0 +1,15 @@
+<form method="post" action="/user/book">
+  <label>Service:</label>
+  <select name="service_id">
+    {% for service in services %}
+    <option value="{{ service.id }}">{{ service.title }} (₹{{ service.price }})</option>
+    {% endfor %}
+  </select><br><br>
+
+  <label>Schedule Time:</label>
+  <input type="datetime-local" name="schedule_time" required><br><br>
+
+  <label>Address:</label><textarea name="address" rows="3" required></textarea><br><br>
+
+  <button class="btn" type="submit">Confirm Booking</button>
+</form>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Payment - Fixengine24*7</title>
+
+    <link rel="stylesheet" href="static/css/booking.css">
+    <script src="static/js/session.js"></script>
+    <script src="static/js/db.js"></script>
+    <script src="static/js/payment.js"></script>
+
+</head>
+
+<body onload="requireLogin()">
+
+<div class="booking-form-box">
+
+    <div class="back-btn" onclick="history.back()">← Back</div>
+
+    <h2>Add Payment</h2>
+
+    <form onsubmit="savePayment(event)">
+
+        <div class="input-block">
+            <label>Booking ID</label>
+            <input type="number" id="pay_booking" required>
+        </div>
+
+        <div class="input-block">
+            <label>Amount (₹)</label>
+            <input type="number" id="pay_amount" required>
+        </div>
+
+        <div class="input-block">
+            <label>Payment Mode</label>
+            <select id="pay_mode" required>
+                <option value="Cash">Cash</option>
+                <option value="UPI">UPI</option>
+                <option value="Card">Card</option>
+            </select>
+        </div>
+
+        <div class="input-block">
+            <label>Notes / Reference</label>
+            <textarea id="pay_note"></textarea>
+        </div>
+
+        <button class="btn-primary">Save Payment</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

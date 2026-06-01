@@ -1,0 +1,81 @@
+/* -------------------------------------------------------
+   SERVICE LIST PAGE – CLEAN & PROFESSIONAL
+-------------------------------------------------------- */
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f2f3f5;
+}
+
+/* HEADER */
+.booking-header {
+    background: #fff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.booking-logo {
+    height: 60px;
+}
+
+.logout-btn {
+    padding: 8px 18px;
+    background: #0077ff;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+/* PAGE TITLE */
+.booking-title {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* SERVICE GRID */
+.service-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 45px auto;
+    padding-bottom: 40px;
+}
+
+/* SERVICE BOX */
+.service-card {
+    width: 260px;
+    background: #fff;
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+}
+
+/* IMAGE */
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* NAME */
+.service-card h3 {
+    margin-top: 14px;
+    font-size: 20px;
+    font-weight: 600;
+}

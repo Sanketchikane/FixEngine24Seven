@@ -1,0 +1,48 @@
+/* CHATBOT UI – ENTERPRISE */
+
+.chat-container {
+    width: 420px;
+    background: #fff;
+    margin: 50px auto;
+    border-radius: 18px;
+    padding: 0;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+.chat-header {
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    background: #0077ff;
+    color: white;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.chat-ai {
+    width: 48px;
+    margin-right: 12px;
+}
+
+.chat-body {
+    height: 420px;
+    padding: 18px;
+    overflow-y: auto;
+}
+
+.message {
+    padding: 10px 14px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    max-width: 85%;
+}
+
+.user-msg {
+    background: #0077ff;
+    color: white;
+    margin-left: auto;
+}
+
+.bot-msg {
+    background: #f1f1f1;
+}

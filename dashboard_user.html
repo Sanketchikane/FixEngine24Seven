@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+
+    <link rel="stylesheet" href="static/css/dashboard.css">
+
+    <script src="static/js/session.js"></script>
+    <script src="static/js/db.js"></script>
+    <script src="static/js/user.js"></script>
+</head>
+
+<body onload="loadUserDashboard()">
+
+<!-- TOP HEADER -->
+<div class="dashboard-header">
+    <div style="display:flex;align-items:center;gap:12px;">
+        <img src="static/images/logo1.png" class="dashboard-logo">
+        <div class="header-title">Fixengine24×7.com</div>
+    </div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<!-- NAVIGATION TABS -->
+<div class="dashboard-tabs">
+    <a id="tab_home" class="active" onclick="showUserSection('home')">Dashboard</a>
+    <a onclick="showUserSection('bookings')">My Bookings</a>
+    <a onclick="showUserSection('notifications')">Notifications</a>
+    <a onclick="showUserSection('profile')">Profile</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="dashboard-content">
+
+    <div id="user_home" class="card">
+        <h3>Welcome, <span id="userName"></span></h3>
+        <p>Your services and booking status appear here.</p>
+        <br>
+        <button class="btn-main" onclick="goToServices()">Book a Service</button>
+    </div>
+
+    <div id="user_bookings" class="table-box" style="display:none;">
+        <h3>My Bookings</h3>
+        <div id="bookingList"></div>
+    </div>
+
+    <div id="user_notifications" class="card" style="display:none;">
+        <h3>Notifications</h3>
+        <div id="notifList"></div>
+    </div>
+
+    <div id="user_profile" class="card" style="display:none;">
+        <h3>My Profile</h3>
+        <div id="profileInfo"></div>
+    </div>
+
+</div>
+
+</body>
+</html>

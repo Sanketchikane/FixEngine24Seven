@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixengine24*7 - Home</title>
+
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/session.js"></script>
+
+    <style>
+        footer {
+            padding: 25px 60px !important;
+        }
+        .footer-container {
+            align-items: center;
+        }
+        .footer-col h3 {
+            margin-top: 5px;
+        }
+        .footer-credit {
+            margin-top: 10px !important;
+        }
+
+        /* NEW PREMIUM FOOTER */
+        footer {
+            background: linear-gradient(135deg, #001c3d, #004080);
+            color: white !important;
+            padding: 60px 60px !important;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+        .footer-col h3 {
+            color: white;
+        }
+        .footer-links a {
+            color: #dbe7ff;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+        .footer-credit {
+            color: #cfd8f5 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header-main">
+    <div class="header-left">
+        <img src="static/images/logo1.png" class="header-logo">
+        <div class="brand-title">Fixengine24*7.com</div>
+    </div>
+
+    <div class="header-right">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="register.html">Register</a>
+        <a class="btn-login" href="login.html">Login</a>
+    </div>
+</div>
+
+<div class="hero-section">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1>Your Trusted Home Service Partner.</h1>
+        <p>Professional AC repair, Photography, Electrician, Mechanic & more — available near you.</p>
+
+        <div class="hero-buttons">
+            <a class="btn-main" onclick="startBooking()">Book a Service</a>
+            <a class="btn-secondary" href="#services">View Services</a>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title" id="services">Our Popular Services</h2>
+
+<div class="services-box">
+
+    <div class="service-item" onclick="openServiceDetails('Photography')">
+        <img src="static/images/Photography/Photography.gif" class="service-item-img">
+        <p><b>Photography</b></p>
+    </div>
+
+    <div class="service-item" onclick="openServiceDetails('AC Repair')">
+        <img src="static/images/AC/AC.gif">
+        <p><b>AC Repair</b></p>
+    </div>
+
+    <div class="service-item" onclick="openServiceDetails('Electrician')">
+        <img src="static/images/Electrician/elec.gif">
+        <p><b>Electrician</b></p>
+    </div>
+
+    <div class="service-item" onclick="openServiceDetails('Mechanic')">
+        <img src="static/images/Mechanic/mach.gif">
+        <p><b>Mechanic</b></p>
+    </div>
+
+</div>
+
+<center>
+    <a class="btn-main" onclick="startBooking()">Book a Service</a>
+</center>
+
+<h2 class="section-title" id="contact">Contact Us</h2>
+
+<div class="contact-row">
+
+    <div class="contact-form">
+        <input type="text" placeholder="Full Name">
+        <input type="text" placeholder="Phone Number">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button>Send Message</button>
+    </div>
+
+    <div class="contact-image-box">
+        <video autoplay muted loop controls style="width:100%;height:100%;border-radius:16px;object-fit:cover;">
+            <source src="static/images/Mechanic/mac.mp4" type="video/mp4">
+        </video>
+    </div>
+
+</div>
+
+<h2 class="section-title" id="about">About Us</h2>
+
+<div class="about-section">
+    <div class="about-grid">
+
+        <div class="about-card">
+            <h3>Verified Professionals</h3>
+            <p>Skilled & trusted team.</p>
+        </div>
+
+        <div class="about-card">
+            <h3>Fast Booking</h3>
+            <p>Book in 1 minute.</p>
+        </div>
+
+        <div class="about-card">
+            <h3>Affordable Rates</h3>
+            <p>Best market price.</p>
+        </div>
+
+        <div class="about-card">
+            <h3>24×7 Support</h3>
+            <p>Always available.</p>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <img src="static/images/logo1.png" class="footer-logo">
+            <h3>Contact</h3>
+            <p>📞 9527565994</p>
+            <p>✉ support@fixengine247.com</p>
+            <p>✉ Sanket@fixengine247.com</p>
+            <p>📍 Satara, Maharashtra</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Working Hours</h3>
+            <p>Monday–Sunday</p>
+            <p>9 AM – 9 PM</p>
+        </div>
+
+        <div class="footer-col footer-links">
+            <h3>Quick Links</h3>
+            <a href="#services">Services</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="dashboard_user.html">Dashboard</a>
+        </div>
+
+    </div>
+
+    <div class="footer-credit">
+        © 2025 Fixengine24*7. All Rights Reserved.
+    </div>
+</footer>
+
+<script>
+function startBooking() {
+    if (!getSession()) {
+        window.location.href = "login.html";
+        return;
+    }
+    window.location.href = "service_list.html";
+}
+
+function openServiceDetails(service) {
+    window.location.href = "service_details.html?service=" + encodeURIComponent(service);
+}
+</script>
+
+</body>
+</html>

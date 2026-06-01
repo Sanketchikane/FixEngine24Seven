@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Services - Fixengine24×7</title>
+
+    <link rel="stylesheet" href="static/css/service_list.css">
+
+    <script src="static/js/session.js"></script>
+</head>
+
+<body onload="requireLogin()">
+
+<div class="booking-header">
+    <img src="static/images/logo1.png" class="booking-logo">
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<h2 class="booking-title">Choose a Service</h2>
+
+<div class="service-grid">
+
+    <div class="service-card" onclick="openServiceDetails('Photography')">
+        <img src="static/images/Photography/Photography Main.jpg">
+        <h3>Photography</h3>
+    </div>
+
+    <div class="service-card" onclick="openServiceDetails('AC Repair')">
+        <img src="static/images/AC/AC Main.jpg">
+        <h3>AC Repair</h3>
+    </div>
+
+    <div class="service-card" onclick="openServiceDetails('Electrician')">
+        <img src="static/images/Electrician/Electrician Main.jpg">
+        <h3>Electrician</h3>
+    </div>
+
+    <div class="service-card" onclick="openServiceDetails('Mechanic')">
+        <img src="static/images/Mechanic/Machanic main.jpg">
+        <h3>Mechanic</h3>
+    </div>
+
+</div>
+
+<script>
+function openServiceDetails(service) {
+    window.location.href = "service_details.html?service=" + encodeURIComponent(service);
+}
+</script>
+
+</body>
+</html>

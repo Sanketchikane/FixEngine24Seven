@@ -1,0 +1,117 @@
+/* ---------------------------------------------------------
+   SERVICE DETAILS PAGE
+-----------------------------------------------------------*/
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f2f3f5;
+}
+
+/* TOP BANNER */
+.service-banner {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* SERVICE NAME STYLE */
+.banner-title {
+    position: absolute;
+    bottom: 25px;
+    left: 40px;
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: 800;
+    text-shadow: 0px 4px 14px rgba(0,0,0,0.8);
+}
+
+/* VIDEO CONTAINER */
+.service-video-box {
+    width: 80%;
+    margin: 40px auto;
+    height: 420px;                /* FIXED HEIGHT */
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* VIDEO – FULL HEIGHT (NO BLANK AREA) */
+.service-video-box video {
+    width: 100%;
+    height: 100%;                 /* <<< FIXED */
+    display: block;
+    object-fit: cover;
+    background: #000;
+}
+
+/* PROVIDERS TITLE */
+.providers-title {
+    text-align: center;
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+/* PROVIDER GRID */
+.provider-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 25px;
+}
+
+/* PROVIDER CARD */
+.provider-card {
+    width: 300px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    padding-bottom: 20px;
+    transition: 0.3s;
+}
+
+.provider-card img {
+    width: 100%;
+    height: 190px;
+    border-radius: 18px 18px 0 0;
+    object-fit: cover;
+}
+
+.provider-card h3 {
+    margin: 12px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.price {
+    margin: 0 12px;
+    color: #0077ff;
+    font-weight: 600;
+}
+
+.desc {
+    margin: 10px 12px;
+    font-size: 14px;
+    color: #555;
+}
+
+.provider-card button {
+    width: 90%;
+    margin: 15px auto 0;
+    display: block;
+    padding: 12px;
+    border-radius: 10px;
+    background: #0077ff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.provider-card:hover {
+    transform: translateY(-6px);
+}

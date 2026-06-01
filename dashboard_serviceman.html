@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Serviceman Dashboard</title>
+
+    <link rel="stylesheet" href="static/css/dashboard.css">
+    <link rel="stylesheet" href="static/css/serviceman_profile.css">
+
+    <script src="static/js/session.js"></script>
+    <script src="static/js/db.js"></script>
+    <script src="static/js/serviceman.js"></script>
+    <script src="static/js/serviceman_profile.js"></script>
+</head>
+
+<body onload="loadServicemanDashboard()">
+
+<div class="dashboard-header">
+    <div style="display:flex;align-items:center;gap:12px;">
+        <img src="static/images/logo1.png" class="dashboard-logo">
+        <div class="header-title">Fixengine24×7.com</div>
+    </div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<div class="dashboard-tabs">
+    <a id="tab_home" class="active" onclick="showSvcSection('home')">Dashboard</a>
+    <a onclick="showSvcSection('jobs')">Assigned Jobs</a>
+    <a onclick="showSvcSection('availability')">Availability</a>
+    <a onclick="showSvcSection('notifications')">Notifications</a>
+    <a onclick="showSvcSection('profile')">Profile</a>
+</div>
+
+<div class="dashboard-content">
+
+    <div id="svc_home" class="card">
+        <h3>Welcome <span id="svcName"></span></h3>
+        <p>Your assigned work will appear here.</p>
+    </div>
+
+    <div id="svc_jobs" class="table-box" style="display:none;">
+        <h3>Assigned Jobs</h3>
+        <div id="jobList"></div>
+    </div>
+
+    <div id="svc_availability" class="card" style="display:none;">
+        <h3>Availability Status</h3>
+        <p id="availabilityStatus"></p>
+        <button class="btn-main" style="margin-top:10px;" onclick="toggleAvailability()">Toggle Availability</button>
+    </div>
+
+    <div id="svc_notifications" class="card" style="display:none;">
+        <h3>Notifications</h3>
+        <div id="notifList"></div>
+    </div>
+
+    <!-- ⭐ NEW FULL PROFESSIONAL PROFILE PAGE ⭐ -->
+    <div id="svc_profile" class="profile-box" style="display:none;">
+
+        <h2 class="prof-title">My Profile</h2>
+
+        <div class="profile-row">
+
+            <div class="profile-left">
+
+                <div class="prof-img-box">
+                    <img id="prof_img_preview">
+                    <input type="file" id="prof_img" onchange="previewProfileImage()" accept="image/*">
+                </div>
+
+                <div class="prof-info">
+                    <h3 id="prof_name_title"></h3>
+                    <p id="prof_service_title"></p>
+                </div>
+
+            </div>
+
+            <div class="profile-right">
+
+                <form onsubmit="saveServicemanProfile(event)">
+
+                    <label>Name</label>
+                    <input id="prof_name" type="text" required>
+
+                    <label>Phone</label>
+                    <input id="prof_phone" type="text" required>
+
+                    <label>Service Type</label>
+                    <select id="prof_service">
+                        <option>Photography</option>
+                        <option>AC Repair</option>
+                        <option>Electrician</option>
+                        <option>Mechanic</option>
+                    </select>
+
+                    <label>Price (₹)</label>
+                    <input id="prof_price" type="text" required>
+
+                    <label>Description</label>
+                    <textarea id="prof_desc" required></textarea>
+
+                    <button class="btn-main" style="margin-top:20px;">Save Profile</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
